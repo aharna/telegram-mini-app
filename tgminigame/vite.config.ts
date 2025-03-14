@@ -5,6 +5,14 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   server: {
-    allowedHosts: ['bc27-103-218-170-118.ngrok-free.app']
+    allowedHosts: ['f7ea-115-187-46-122.ngrok-free.app'],
+    hmr: {
+      overlay: true,
+    },
+    watch: {
+      usePolling: true,
+      interval: 100
+    }
   }
 })
+
